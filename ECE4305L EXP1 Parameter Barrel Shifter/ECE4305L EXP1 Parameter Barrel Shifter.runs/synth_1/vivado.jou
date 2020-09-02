@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Aug 31 13:59:21 2020
+# Process ID: 7592
+# Current directory: C:/Users/antho/OneDrive/Documents/Vivado Code Scripts/ECE4305L EXP1 Parameter Barrel Shifter/ECE4305L EXP1 Parameter Barrel Shifter.runs/synth_1
+# Command line: vivado.exe -log barrelDriver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source barrelDriver.tcl
+# Log file: C:/Users/antho/OneDrive/Documents/Vivado Code Scripts/ECE4305L EXP1 Parameter Barrel Shifter/ECE4305L EXP1 Parameter Barrel Shifter.runs/synth_1/barrelDriver.vds
+# Journal file: C:/Users/antho/OneDrive/Documents/Vivado Code Scripts/ECE4305L EXP1 Parameter Barrel Shifter/ECE4305L EXP1 Parameter Barrel Shifter.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source barrelDriver.tcl -notrace
