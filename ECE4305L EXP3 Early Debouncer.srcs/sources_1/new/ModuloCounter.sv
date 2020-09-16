@@ -3,7 +3,6 @@
 module moduloCounter #(parameter M = 1_000_000) (clock, reset, maxTick);
     localparam N = $clog2(M);                               // required bit-width for modulation counting
     input logic clock, reset;                               // driving input variables
-    //input logic [N-1:0] Q;                                  // driving counter variable
     output logic maxTick;                                   // output pulse to indicate modulation
     
     // declare the state register logic:
@@ -20,9 +19,6 @@ module moduloCounter #(parameter M = 1_000_000) (clock, reset, maxTick);
     
     // assing the next state logic:
     assign rNext = (rReg == (M - 1)) ? 0 : (rReg + 1);
-    
-    // assign output logic:
-    //assign Q = rReg;
     
     // assign output tick for modulation counter:
     assign maxTick = (rReg == (M - 1)) ? 1'b1 : 1'b0;
