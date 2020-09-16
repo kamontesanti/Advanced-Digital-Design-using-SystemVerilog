@@ -4,7 +4,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
     output logic dbOut;                             // output of the debouncer module
     
     logic tick;                                     // logic for the tick driver
-    //logic Q;                                        // logic simply for transfer of values for module
     
     typedef enum {zero, wait0_1, wait0_2, wait0_3, one, wait1_1, wait1_2, wait1_3} stateType;
     stateType stateReg, stateNext;
