@@ -46,7 +46,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = wait0_2;
                         else
                             stateNext = wait0_1;
-                        //stateNext = (tick) ? wait0_2 : wait0_1;
                     end
                 
                 // this state corresponds to an output of one (early detection): 
@@ -58,7 +57,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = wait0_3;
                         else
                             stateNext = wait0_2;
-                        //stateNext = (tick) ? wait0_3 : wait0_2;
                     end
                     
                 // this state corresponds to an output of one (early detection): 
@@ -70,7 +68,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = one;
                         else
                             stateNext = wait0_3;
-                        //stateNext = (tick) ? one : wait0_3;
                     end
                 
                 // if switch is low, transition to next state "wait0_1":   
@@ -81,7 +78,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = wait1_1;
                         else
                             stateNext = one;
-                        //stateNext = (!sw) ? wait1_1 : one;
                     end
                 
                 // we must continue to wait for 30 ms from this state forward:   
@@ -91,7 +87,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = wait1_2;
                         else
                             stateNext = wait1_1;
-                        //stateNext = (tick) ? wait1_2 : wait1_1;
                     end
                     
                 // we must continue to wait for 20 ms from this state forward:       
@@ -101,7 +96,6 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = wait1_3;
                         else
                             stateNext = wait1_2;
-                        //stateNext = (tick) ? wait1_3 : wait1_2;
                     end
                 
                 // we must continue to wait for 10 ms from this state forward:    
@@ -111,14 +105,10 @@ module earlyDebouncer(sw, reset, clock, dbOut);
                             stateNext = zero;
                         else
                             stateNext = wait1_3;
-                        //stateNext = (tick) ? zero : wait1_3;
                     end
                     
                 default: stateNext = zero;
             endcase
         end
-    
-    // assign the Moore output based on the states:    
-    //assign dbOut = ((stateReg == wait0_1) || (stateReg == wait0_2) || (stateReg == wait0_3) || (stateReg == one)) ? 1'b1 : 1'b0;
     
 endmodule
