@@ -7,4 +7,6 @@ All core class files for input/output cores are contained as ".h" and ".cpp" fil
 
 EXP 11 - Thermometer using I2C
 
+- "temperature_app.cpp"
+
 Link: https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/
